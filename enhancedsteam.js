@@ -1053,11 +1053,11 @@ function highlight_node(node, color) {
 		}
 
 		// App and community hub page headers // won't work
-		/*if (node.classList.contains("apphub_HeaderTop") || node.classList.contains("apphub_HeaderStandardTop")) {
+		if (node.classList.contains("apphub_HeaderTop") || node.classList.contains("apphub_HeaderStandardTop")) {
 			$node = $(node).find(".apphub_AppName");
 			$node.css("color", color);
 			return;
-		}*/
+		}
 
 		$(node).removeClass("ds_flagged").find(".ds_flag").remove();
 		$(node).find(".ds_flagged").removeClass("ds_flagged");
@@ -1095,7 +1095,7 @@ function add_tag(node, tag) {
 	storage.get(function(settings) {
 		if (settings.tag_short === undefined) { settings.tag_short = true; storage.set({'tag_short': settings.tag_short}); }
 
-		// Load the colors CSS for tags
+		// Load the colours CSS for tags
 		if (!tag_css_loaded) {
 			tag_css_loaded = true;
 			
